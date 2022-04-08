@@ -1,4 +1,4 @@
-小朋友又来看了？双重人格？你看一眼就gg一生！
+小朋友又来看了？表面举报对方背后自己用得欢，双重人格？你看一眼就gg一生！
 
 # [![HaxExtend](https://github.com/mybdye/HaxExtend/actions/workflows/main.yml/badge.svg)](https://github.com/mybdye/HaxExtend/actions/workflows/main.yml)
 #### 修补计划（dev 分支）
