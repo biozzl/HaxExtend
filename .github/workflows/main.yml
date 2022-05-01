@@ -24,7 +24,6 @@ jobs:
         - name: 'Install requirements'
           run: |
             pip3 install -r ./requirements.txt
-
         - name: 'Working'
           env:
             USERNAME: ${{ secrets.USERNAME }}
@@ -32,4 +31,3 @@ jobs:
             BARKKEY: ${{ secrets.BARKKEY }}
           run: |
             python3 ./main.py
-        
