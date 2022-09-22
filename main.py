@@ -258,7 +258,7 @@ if __name__ == '__main__':
     # while "vps-renew" not in driver.current_url:
     #     print("URL: "+driver.current_url)
     #     time.sleep(5)
-    time.sleep(16)
+    time.sleep(20)
     driver.switch_to.default_content()
 
     # input web address
@@ -280,7 +280,7 @@ if __name__ == '__main__':
     # submit_button (Renew VPS)
     print('click Renew VPS')
     driver.find_element(By.NAME, 'submit_button').click()
-    time.sleep(16)
+    time.sleep(20)
     # driver.switch_to.default_content()
 
     print('copy text')
