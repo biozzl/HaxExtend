@@ -10,6 +10,7 @@ import random
 import urllib
 import requests
 import undetected_chromedriver as uc
+uc.TARGET_VERSION = 105
 
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
