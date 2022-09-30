@@ -35,7 +35,7 @@ except:
     barkKey = 0
 
 def delay():
-    time.sleep(random.randint(2, 3))
+    time.sleep(random.randint(3, 4))
 
 def audioToText(audioFile):
     driver.execute_script('''window.open("","_blank")''')
@@ -231,7 +231,7 @@ if __name__ == '__main__':
     driver = init()
     # WebDriverWait(driver, 20).until(EC.frame_to_be_available_and_switch_to_it((By.CSS_SELECTOR,"iframeCssSelector")))
     # driver.switch_to.default_content()
-    time.sleep(10)
+    time.sleep(20)
     print('fill username')
     driver.find_element(By.XPATH, '//*[@id="text"]').send_keys(USERNAME)
     print('fill password')
@@ -241,12 +241,12 @@ if __name__ == '__main__':
     # reCAPTCHA
     print('do reCAPTCHA')
     reCAPTCHA()
-    time.sleep(10)
+    time.sleep(20)
 
     # login
     print('click login')
     driver.find_element(By.NAME, 'login').click()
-    time.sleep(10)
+    time.sleep(20)
 
     # Extend VPS link |
     # 此处click不知道为什么不跳转界面，所以导致报错：找不到web_address元素————————等待路过的大佬指点迷津！！
