@@ -25,7 +25,7 @@ urlExtendRenew = 'https://woiden.id/vps-renew/'
 SpeechToTextURL = 'https://speech-to-text-demo.ng.bluemix.net/'
 
 # secret
-NAME = os.environ['USERNAME_WOIDEN']
+USERNAME = os.environ['USERNAME_WOIDEN']
 PASSWORD = os.environ['PASSWORD_WOIDEN']
 try:
     BARKKEY = os.environ['BARKKEY']
