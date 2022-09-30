@@ -18,7 +18,10 @@
 #### Secret 增加以下变量
 - ```USERNAME```
 - ```PASSWORD```
+- ```USERNAME_WOIDEN```
+- ```PASSWORD_WOIDEN```
 - ```BARKKEY```
+
 #### ```随缘 Extend，Possibly blocked by google```，
 - 原因： 
 ```因为github的Actions虚机托管在Azure上， 每次重新执行Actions的run workflow都会导致切换公网IP，有的IP被别人使用过（干啥就不知道了嘿嘿！），所以识别成了机器人，报出这个错。```
