@@ -145,9 +145,9 @@ def barkPush(body):
         barkUrl = 'https://api.day.app/' + BARKKEY
         title = 'HaxExtend'
         requests.get(url=f'{barkUrl}/{title}/{body}?isArchive=1')
-        print('bark push Done! Body:', body)
+        print('bark push Done! Body_hax:', body)
     elif barkKey == 0:
-        print('No barkKey, Body is:', body)
+        print('No barkKey, Body_hax is:', body)
 
 def diffPlatformDriverPath():
     sysstr = platform.system()
