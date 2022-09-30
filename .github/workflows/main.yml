@@ -32,5 +32,5 @@ jobs:
             PASSWORD_WOIDEN: ${{ secrets.USERNAME_WOIDEN }}
             BARKKEY: ${{ secrets.BARKKEY }}
           run: |
-           # python3 ./main.py
+            python3 ./main.py
             python3 ./main_Woiden.py
