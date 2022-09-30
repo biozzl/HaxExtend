@@ -25,8 +25,8 @@ urlExtendRenew = 'https://woiden.id/vps-renew/'
 SpeechToTextURL = 'https://speech-to-text-demo.ng.bluemix.net/'
 
 # secret
-USERNAME = os.environ['USERNAME']
-PASSWORD = os.environ['PASSWORD']
+USERNAME = os.environ['USERNAME_woiden']
+PASSWORD = os.environ['PASSWORD_woiden']
 try:
     BARKKEY = os.environ['BARKKEY']
     barkKey = 1
@@ -265,7 +265,7 @@ if __name__ == '__main__':
     # input web address
     print('fill web address')
     # print(driver.find_elements(By.TAG_NAME, "body")[0].text)
-    driver.find_element(By.XPATH, '//*[@id="web_address"]').send_keys('hax.co.id')
+    driver.find_element(By.XPATH, '//*[@id="web_address"]').send_keys('woiden.co.id')
     # captcha
     print('do CAPTCHA')
     driver.find_element(By.XPATH, '//*[@id="captcha"]').send_keys(CAPTCHA())
