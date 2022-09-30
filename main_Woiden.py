@@ -233,9 +233,9 @@ if __name__ == '__main__':
     # driver.switch_to.default_content()
     time.sleep(20)
     print('fill username')
-    driver.find_element(By.XPATH, '//*[@id="text"]').send_keys(USERNAME_WOIDEN)
+    driver.find_element(By.XPATH, '//*[@id="text"]').send_keys(USERNAME)
     print('fill password')
-    driver.find_element(By.XPATH, '//*[@id="password"]').send_keys(PASSWORD_WOIDEN)
+    driver.find_element(By.XPATH, '//*[@id="password"]').send_keys(PASSWORD)
     delay()
 
     # reCAPTCHA
