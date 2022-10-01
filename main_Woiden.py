@@ -231,7 +231,7 @@ if __name__ == '__main__':
     driver = init()
     # WebDriverWait(driver, 20).until(EC.frame_to_be_available_and_switch_to_it((By.CSS_SELECTOR,"iframeCssSelector")))
     # driver.switch_to.default_content()
-    time.sleep(20)
+    time.sleep(25)
     print('fill username')
     driver.find_element(By.XPATH, '//*[@id="text"]').send_keys(USERNAME)
     print('fill password')
@@ -241,12 +241,12 @@ if __name__ == '__main__':
     # reCAPTCHA
     print('do reCAPTCHA')
     reCAPTCHA()
-    time.sleep(20)
+    time.sleep(25)
 
     # login
     print('click login')
     driver.find_element(By.NAME, 'login').click()
-    time.sleep(20)
+    time.sleep(25)
 
     # Extend VPS link |
     # 此处click不知道为什么不跳转界面，所以导致报错：找不到web_address元素————————等待路过的大佬指点迷津！！
@@ -259,7 +259,7 @@ if __name__ == '__main__':
     # while "vps-renew" not in driver.current_url:
     #     print("URL: "+driver.current_url)
     #     time.sleep(5)
-    time.sleep(20)
+    time.sleep(25)
     driver.switch_to.default_content()
 
     # input web address
@@ -281,11 +281,12 @@ if __name__ == '__main__':
     # submit_button (Renew VPS)
     print('click Renew VPS')
     driver.find_element(By.NAME, 'submit_button').click()
-    time.sleep(20)
+    time.sleep(25)
     # driver.switch_to.default_content()
 
     print('copy text')
     # body = WebDriverWait(driver, 30).until(EC.visibility_of_element_located((By.XPATH, '//*[@id="response"]/div'))).text
+    time.sleep(10)
     body = driver.find_element(By.XPATH, '//*[@id="response"]/div').text
     # print('textBody:', body)
     delay()
