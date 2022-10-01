@@ -26,8 +26,8 @@ jobs:
             pip3 install -r ./requirements.txt
         - name: 'Working'
           env:
-            USERNAME1: ${{ secrets.USERNAMEWOIDEN }}
-            PASSWORD1: ${{ secrets.USERNAMEWOIDEN }}
+            USERNAMEWOIDEN: ${{ secrets.USERNAMEWOIDEN }}
+            PASSWORDWOIDEN: ${{ secrets.USERNAMEWOIDEN }}
             BARKKEY: ${{ secrets.BARKKEY }}
           run: |
             python3 ./main_Woiden.py
