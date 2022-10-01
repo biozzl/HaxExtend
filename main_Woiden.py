@@ -25,8 +25,8 @@ urlExtendRenew = 'https://woiden.id/vps-renew/'
 SpeechToTextURL = 'https://speech-to-text-demo.ng.bluemix.net/'
 
 # secret
-USERNAMEWOIDEN = secrets.USERNAMEWOIDEN
-PASSWORDWOIDEN = secrets.PASSWORDWOIDEN
+USERNAMEWOIDEN = os.environ['USERNAMEWOIDEN']
+PASSWORDWOIDEN = os.environ['PASSWORDWOIDEN']
 try:
     BARKKEY = os.environ['BARKKEY']
     barkKey = 1
@@ -246,7 +246,7 @@ if __name__ == '__main__':
     # login
     print('click login')
     driver.find_element(By.NAME, 'login').click()
-    time.sleep(31)
+    time.sleep(21)
 
     # Extend VPS link |
     # 此处click不知道为什么不跳转界面，所以导致报错：找不到web_address元素————————等待路过的大佬指点迷津！！
@@ -254,6 +254,7 @@ if __name__ == '__main__':
     print('click Extend VPS')
     # WebDriverWait(driver, 30).until(EC.visibility_of_element_located((By.LINK_TEXT, 'Extend VPS Expiration'))).click()
     # driver.find_element(By.LINK_TEXT, 'Extend VPS').click()
+    time.sleep(25)
     driver.get(urlExtendRenew)
     # print("URL: "+driver.current_url)
     # while "vps-renew" not in driver.current_url:
