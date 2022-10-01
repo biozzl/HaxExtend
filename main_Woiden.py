@@ -246,7 +246,7 @@ if __name__ == '__main__':
     # login
     print('click login')
     driver.find_element(By.NAME, 'login').click()
-    time.sleep(20)
+    time.sleep(31)
 
     # Extend VPS link |
     # 此处click不知道为什么不跳转界面，所以导致报错：找不到web_address元素————————等待路过的大佬指点迷津！！
