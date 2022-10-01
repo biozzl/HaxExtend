@@ -25,8 +25,8 @@ urlExtendRenew = 'https://woiden.id/vps-renew/'
 SpeechToTextURL = 'https://speech-to-text-demo.ng.bluemix.net/'
 
 # secret
-USERNAME = os.environ['USERNAME1']
-PASSWORD = os.environ['PASSWORD1']
+USERNAME1 = os.environ['USERNAME1']
+PASSWORD1 = os.environ['PASSWORD1']
 try:
     BARKKEY = os.environ['BARKKEY']
     barkKey = 1
@@ -233,9 +233,9 @@ if __name__ == '__main__':
     # driver.switch_to.default_content()
     time.sleep(10)
     print('fill username')
-    driver.find_element(By.XPATH, '//*[@id="text"]').send_keys(USERNAME)
+    driver.find_element(By.XPATH, '//*[@id="text"]').send_keys(USERNAME1)
     print('fill password')
-    driver.find_element(By.XPATH, '//*[@id="password"]').send_keys(PASSWORD)
+    driver.find_element(By.XPATH, '//*[@id="password"]').send_keys(PASSWORD1)
     delay()
 
     # reCAPTCHA
