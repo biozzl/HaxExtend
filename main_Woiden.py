@@ -35,7 +35,7 @@ except:
     barkKey = 0
 
 def delay():
-    time.sleep(random.randint(3, 4))
+    time.sleep(random.randint(2, 3))
 
 def audioToText(audioFile):
     driver.execute_script('''window.open("","_blank")''')
