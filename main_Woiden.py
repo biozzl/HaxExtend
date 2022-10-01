@@ -10,7 +10,6 @@ import random
 import urllib
 import requests
 import undetected_chromedriver as uc
-uc.TARGET_VERSION = 105
 
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
@@ -145,9 +144,9 @@ def barkPush(body):
         barkUrl = 'https://api.day.app/' + BARKKEY
         title = 'HaxExtend'
         requests.get(url=f'{barkUrl}/{title}/{body}?isArchive=1')
-        print('bark push Done! Body_woiden:', body)
+        print('bark push Done! Body:', body)
     elif barkKey == 0:
-        print('No barkKey, Body_woiden is:', body)
+        print('No barkKey, Body is:', body)
 
 def diffPlatformDriverPath():
     sysstr = platform.system()
@@ -231,7 +230,7 @@ if __name__ == '__main__':
     driver = init()
     # WebDriverWait(driver, 20).until(EC.frame_to_be_available_and_switch_to_it((By.CSS_SELECTOR,"iframeCssSelector")))
     # driver.switch_to.default_content()
-    time.sleep(25)
+    time.sleep(10)
     print('fill username')
     driver.find_element(By.XPATH, '//*[@id="text"]').send_keys(USERNAME)
     print('fill password')
@@ -241,12 +240,12 @@ if __name__ == '__main__':
     # reCAPTCHA
     print('do reCAPTCHA')
     reCAPTCHA()
-    time.sleep(25)
+    time.sleep(10)
 
     # login
     print('click login')
     driver.find_element(By.NAME, 'login').click()
-    time.sleep(25)
+    time.sleep(10)
 
     # Extend VPS link |
     # 此处click不知道为什么不跳转界面，所以导致报错：找不到web_address元素————————等待路过的大佬指点迷津！！
@@ -259,13 +258,13 @@ if __name__ == '__main__':
     # while "vps-renew" not in driver.current_url:
     #     print("URL: "+driver.current_url)
     #     time.sleep(5)
-    time.sleep(25)
+    time.sleep(16)
     driver.switch_to.default_content()
 
     # input web address
     print('fill web address')
     # print(driver.find_elements(By.TAG_NAME, "body")[0].text)
-    driver.find_element(By.XPATH, '//*[@id="web_address"]').send_keys('Woiden.id')
+    driver.find_element(By.XPATH, '//*[@id="web_address"]').send_keys('woiden.id')
     # captcha
     print('do CAPTCHA')
     driver.find_element(By.XPATH, '//*[@id="captcha"]').send_keys(CAPTCHA())
@@ -281,12 +280,11 @@ if __name__ == '__main__':
     # submit_button (Renew VPS)
     print('click Renew VPS')
     driver.find_element(By.NAME, 'submit_button').click()
-    time.sleep(25)
+    time.sleep(16)
     # driver.switch_to.default_content()
 
     print('copy text')
     # body = WebDriverWait(driver, 30).until(EC.visibility_of_element_located((By.XPATH, '//*[@id="response"]/div'))).text
-    time.sleep(10)
     body = driver.find_element(By.XPATH, '//*[@id="response"]/div').text
     # print('textBody:', body)
     delay()
