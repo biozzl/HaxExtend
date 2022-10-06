@@ -10,8 +10,6 @@ on:
 
 jobs:
   Job1:
-    name: Hax_extend
-    build:
         runs-on: windows-2022
         # runs-on: macos-latest
         steps:
@@ -37,8 +35,6 @@ jobs:
             python3 ./main.py
          # python3 ./main_Woiden.py
   Job2:
-    name: Woiden_extend
-    build:
         runs-on: windows-2022
         # runs-on: macos-latest
         steps:
