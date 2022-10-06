@@ -9,12 +9,12 @@ on:
   workflow_dispatch:
 
 jobs:
-Hax:
-  name: Hax_extend
-  build:
-    runs-on: windows-2022
-     # runs-on: macos-latest
-    steps:
+  Job1:
+    name: Hax_extend
+    build:
+        runs-on: windows-2022
+        # runs-on: macos-latest
+        steps:
         - name: 'Checkout codes'
           uses: actions/checkout@v2
           with:
@@ -36,41 +36,12 @@ Hax:
           run: |
             python3 ./main.py
          # python3 ./main_Woiden.py
-jobs:
-Hax:
-  name: Hax_extend
-  build:
-    runs-on: windows-2022
-     # runs-on: macos-latest
-    steps:
-        - name: 'Checkout codes'
-          uses: actions/checkout@v2
-          with:
-            python-version: '3.9.5'
-#         - name: 'Set up Python'
-#           uses: actions/setup-python@v2
-#           with:
-#             python-version: '3.9.10'
-        - name: 'Install requirements'
-          run: |
-            pip3 install -r ./requirements.txt
-        - name: 'Working'
-          env:
-            USERNAME: ${{ secrets.USERNAME }}
-            PASSWORD: ${{ secrets.PASSWORD }}
-           # USERNAME_WOIDEN: ${{ secrets.USERNAME_WOIDEN }}
-           # PASSWORD_WOIDEN: ${{ secrets.USERNAME_WOIDEN }}
-            BARKKEY: ${{ secrets.BARKKEY }}
-          run: |
-            python3 ./main.py
-         # python3 ./main_Woiden.py
-jobs:
-Woiden:
-  name: Woiden_extend
-  build:
-    runs-on: windows-2022
-     # runs-on: macos-latest
-    steps:
+  Job2:
+    name: Woiden_extend
+     build:
+        runs-on: windows-2022
+        # runs-on: macos-latest
+        steps:
         - name: 'Checkout codes'
           uses: actions/checkout@v2
           with:
