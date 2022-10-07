@@ -18,8 +18,8 @@
 #### Secret 增加以下变量
 - ```USERNAME```
 - ```PASSWORD```
-- ```USERNAME_WOIDEN```
-- ```PASSWORD_WOIDEN```
+- ```USERNAMEWOIDEN```
+- ```PASSWORDWOIDEN```
 - ```BARKKEY```
 
 #### ```随缘 Extend，Possibly blocked by google```，
